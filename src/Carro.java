@@ -1,4 +1,17 @@
-
+/**
+ * A classe Carro contém métodos para visualizar e alterar a quantidade de combustível e simular um carro em andamento.
+ * 
+ * <ul>
+ * <li>meterCombustivel</li>
+ * <li>meterCombustivel</li>
+ * <li>andar</li>
+ * <li>parar</li>
+ * <li>obterAutonomia</li>
+ * </ul>
+ * 
+ * @author miguelsantos
+ *
+ */
 public class Carro {
 	
 	static private final double consumo=5.5; // litros por 100 klm
@@ -29,7 +42,11 @@ public class Carro {
 	}
 	
 	// Métodos 
-	
+	/**
+	 * Calcula a quantidade de combustivel com que o carro irá ficar depois do utilizador abastecer com a quantidade pretendida.
+	 * 
+	 * @param quantidade valor da quantidade de combustivel a ser introduzido.
+	 */
 	public void meterCombustivel( double quantidade) { 		
 		
 		// Devia testar se Transborda o depósito
@@ -39,6 +56,12 @@ public class Carro {
 		
 	}
 	
+	
+	/**
+	 * Calcula a quantidade de combustivel que ainda é possível meter para encher o depósito.
+	 * 
+	 * @return retorna o valor de litros a meter para atestar o depósito.
+	 */
 	// atestar o depósito
 	public double meterCombustivel() {
 		
@@ -50,7 +73,12 @@ public class Carro {
 		return litrosMeter;
 	}
 	
-	
+	/**
+	 * Calcula e verifica se é possível andar a distância pretendida tendo em conta a quantidade de combustível.
+	 * 
+	 * @param distancia valor da distância pretendida a ser percorrida.
+	 * @return retorna o resultado sobre se é possível andar.
+	 */
 	// distancia em klm
 	public boolean andar( double distancia ) {
 		
@@ -70,6 +98,11 @@ public class Carro {
 			
 	}
 	
+	/**
+	 * Faz o carro parar.
+	 * 
+	 * @return o valor para fazer o carro parar.
+	 */
 	public boolean parar() {
 		
 		// se estiver a andar pára 
@@ -77,7 +110,13 @@ public class Carro {
 		return true;
 	}
 	
-	// kmCombustivel( )    
+	
+	/**
+	 * Calcula a autonomia do carro.
+	 * 
+	 * @return retorna o valor da autonomia do carro.
+	 */
+	// kmCombustivel( )
 	public double obterAutonomia() {
 		
 		return ( quantidadeCombustivel / getConsumo() ) * 100;
